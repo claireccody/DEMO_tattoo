@@ -1,299 +1,438 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jenna Leigh - Tattoo Artist</title>
+    <meta
+      name="description"
+      content="Clean, intentional websites for creatives, artists, and practitioners."
+    />
+    <style>
+      /* @font-face {
+        font-family: "MyScript";
+        src: url(./MyScript_num-Regular.ttf) format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      } */
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jane Doe - Tattoo Artist</title>
-  <meta name="description" content="Clean, intentional websites for creatives, artists, and practitioners." />
-  <style>
+      @import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
-    @font-face{
-      font-family: 'MyScript';
-      src: url(./MyScript_num-Regular.ttf) format('truetype');
-      font-weight: normal;
-    font-style: normal;
-    }
-
-
-    *{
-      box-sizing: border-box;
-    }
-
-    #about{
-      font-family: 'MyScript', sans-serif;
-
-    }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      line-height: 1.6;
-      color: #111;
-      background: #fafafa;
-    }
-
-    main {
-      max-width: 720px;
-      margin: auto;
-      padding: 8px 32px;
-    }
-
-    h1,
-    h2,
-    h3 {
-      line-height: 1.2;
-      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    }
-
-    h2{
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-
-    section {
-      margin-top: 3rem;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .cta {
-      margin-top: 2rem;
-      font-weight: 600;
-    }
-
-   .contact:hover{
-      text-decoration: underline;
-    }
-
- 
-    header{
-      text-align: center;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      background-color: #000000;
-      box-shadow: 0px 4px 12px #444444cc;
-      color: white;
-      text-shadow: 0 0 4px #cccccc;
-      height: 15vh;
-    }
-
-    .header__content{
-      width: 100%;
-      max-width: 900px;
-      padding: 12px 12px ;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-    select{
-      background-color: #00000000;
-      box-shadow: none;
-      color: white;
-    }
-
-    .logo{
-      display: flex;
-      flex-direction: row;
-    }
-
-    .links{
-      display: flex;
-      flex-direction: row;
-      text-decoration: none !important;
-      list-style-type: none;
-      margin: 32px 16px;
-    }
-
-    .link{
-      margin:4px;
-      background-color: #ffffff99;
-      padding: 4px;
-      border-radius: 4px;
-      color: white;
-      text-shadow: 0 0 4px #0c355d;
-      box-shadow: 0 2px 4px #190c5def;
-      font-weight: bold;
-    }
-    .link:hover{
-      box-shadow: none;
-    }
-
-    .logo__img{
-      display: flex;
-      width: 80px;
-    }
-
-    .logo__img--wrapper{
-      background-color: #ffffff;
-      max-height: 80px;
-      box-shadow: 0 2px 4px #190c5def;
-    }
-
-    footer{
-      font-family: 'MyScript', sans-serif;
-      font-size:larger;
-      width: 100%;
-      align-items: center;
-      text-align: center;
-      margin: 48px 0 0 0;
-      background-color: #ffffff99;
-      padding: 48px 0;
-    }
-    
-    body{
-      background-image: linear-gradient(white,#000000);
-    }
-
-    section{
-
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    #hero{
-      background-color: #ffffff44;
-      margin-top: 0;
-      height: 85vh;
-    }
-    #hero, #gallery
-    {
-      display: flex;
-      flex-direction: column;
-    }
-    #gallery_A{
-      display: grid;
-      grid-template-columns: auto auto auto;
-      column-gap: 20px;
-      row-gap: 20px;
-      padding: 20px 20px;
-      background-color: #000000;
-      width: 100%;
-      max-width: 728px;
-    }
-    #gallery_B{
-      padding: 20px 20px;
-      background-color: #ffffff;
-      width: 100%;
-      max-width: 728px;
-    }
-    .gallery_B{
-      display: grid;
-      grid-template-columns: auto auto auto;
-      column-gap: 20px;
-      row-gap: 20px;
-    }
-
-    .sample{
-      background-color: white;
-      padding: 8px 8px;
-    }
-
-    .purple{
-      color: #ffffff;
-      text-shadow: #000000 0 0 4px;
-      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    }
-
-    .right{
-      text-align: right;
-    }
-
-    .myScript{
-      font-family: 'MyScript', sans-serif;
-      font-size: larger;
-    }
-
-    @media (max-width: 600px){
-
-      #contact-link
-      {display: contents !important;}
-
-      .link{
-        display: none;
+      * {
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+        font-family: "Rubik", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
       }
-    }
 
+      body {
+        margin: 0;
+        line-height: 1.6;
+        color: #111;
+        background: #fafafa;
+      }
 
-  </style>
-</head>
+      main {
+        max-width: 720px;
+        margin: auto;
+        padding: 8px 32px;
+      }
 
-<body>
-  <header>
-    <div class="header__content">
-      <!-- <figure class="logo__img--wrapper">
+      h1,
+      h2,
+      h3 {
+        line-height: 1.2;
+        font-family: "Charm", cursive;
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      section {
+        margin-top: 3rem;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .cta {
+        margin-top: 2rem;
+        font-weight: 600;
+        font-size: x-large;
+      }
+
+      .contact:hover {
+        text-decoration: underline;
+      }
+
+      header {
+        text-align: center;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: #000000;
+        box-shadow: 0px 4px 12px #444444cc;
+        color: white;
+        text-shadow: 0 0 4px #cccccc;
+        height: 15vh;
+      }
+
+      .header__content {
+        width: 100%;
+        max-width: 900px;
+        padding: 12px 12px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      select {
+        background-color: #00000000;
+        box-shadow: none;
+        color: white;
+      }
+
+      .logo {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .links {
+        display: flex;
+        flex-direction: row;
+        text-decoration: none !important;
+        list-style-type: none;
+        margin: 32px 16px;
+      }
+
+      .link {
+        margin: 4px;
+        background-color: #ffffff99;
+        padding: 4px;
+        /* border-radius: 4px; */
+        color: white;
+        text-shadow: 0 0 4px #000000;
+        font-weight: bold;
+        border: 0.1px solid black;
+        box-shadow: 0 0 2px 2px #ffffff99;
+      }
+      .link:hover {
+        box-shadow: none;
+      }
+
+      .logo__img {
+        display: flex;
+        width: 80px;
+      }
+
+      .logo__img--wrapper {
+        background-color: #ffffff;
+        max-height: 80px;
+        box-shadow: 0 2px 4px #190c5def;
+      }
+
+      footer {
+        font-size: larger;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        margin: 48px 0 0 0;
+        /* background-color: #ffffff99; */
+        background-image: linear-gradient(#ffffffef, #ffffffef),url('./assets/galleryB/2.png');
+        padding: 48px 0;
+      }
+
+      body {
+        background-image: linear-gradient(white, #000000);
+      }
+
+      section {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #hero {
+        /* background-color: #ffffff44; */
+        background-image:
+          linear-gradient(to right, #ffffffdd, #fffffffc, #ffffffdd),
+          url("./assets/demoLogo.png");
+        background-position: center;
+        margin-top: 0;
+        height: 85vh;
+        padding: 10px;
+      }
+      #hero,
+      #gallery {
+        display: flex;
+        flex-direction: column;
+      }
+      #gallery_A {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 20px;
+        background-color: #000000;
+        border: 0.1px solid white;
+        box-shadow: 0 0 2px 4px black;
+        width: 100%;
+        max-width: 728px;
+        margin-top: 8px;
+      }
+      #gallery_B {
+        padding: 20px 20px;
+        background-color: #ffffff;
+        border: 0.1px solid black;
+        box-shadow: 0 0 2px 4px white;
+        width: 100%;
+        max-width: 728px;
+
+      }
+      .gallery_B,
+      .gallery_A {
+        display: grid;
+        column-gap: 20px;
+        row-gap: 20px;
+        justify-content: center;
+        align-items: center;
+      }
+      .gallery_A {
+        grid-template-columns: auto auto auto;
+      }
+      .gallery_B {
+        grid-template-columns: auto auto;
+      }
+
+      .gallery_A__sample {
+        background-color: white;
+      }
+      .gallery_B__sample {
+        background-color: black;
+      }
+
+      .gallery_A__sample,
+      .gallery_B__sample {
+        display: flex;
+        padding: 8px 8px;
+        width: 100%;
+      }
+
+      #GalleryB {
+        margin-left: 0;
+      }
+
+      .purple {
+        /* color: #ffffff; */
+        text-shadow: #000000 0 0 4px;
+        font-family: "Charm", cursive;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .right {
+        text-align: right;
+      }
+
+      .myScript {
+        font-size: larger;
+      }
+
+      /* @media (max-width: 600px) {
+        #contact-link {
+          display: contents !important;
+        }
+
+        .link {
+          display: none;
+        }
+
+      } */
+      
+      @media (max-width: 728px) {
+                    .gallery_A {
+        grid-template-columns: auto auto;
+      }}
+
+      .hide {
+        display: none !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="header__content">
+        <!-- <figure class="logo__img--wrapper">
         <img src="./assets/personal-logo.png" alt="" class="logo__img">
       </figure> -->
-      <div class="header__content--name">
-      <h1 style="color:white; text-shadow: 0 0 4px#0c355d;">Jane Doe</h1>
-    </div>
-    <div class="header__content--sections">
-      <ul class="links">
-        <!-- <li class="link"><a href="#home">Home</a></li> -->
-        <li class="link">
-          <select name="Gallery" id="">
-            <option value="" selected>Gallery</option>
-            <option value=""><a href="#gallery_A">Fresh</a></option>
-            <option value=""><a href="#gallery_B">Cover-Ups</a></option>
-          </select></li>
-        <li id="contact-link" class="link">
-          <a class="contact" href="mailto:studioceiz.contact@gmail.com">BOOK</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  </header>
-  
-    <section id="hero" style="width:100vw; padding:0 15vw">
+        <div class="header__content--name">
+          <h1 style="color: white; text-shadow: 0 0 4px#0c355d">Jenna Leigh</h1>
+        </div>
+        <div class="header__content--sections">
+          <ul class="links">
+            <!-- <li class="link"><a href="#home">Home</a></li> -->
+            <li class="">
+              <select
+                style="align-self: center; justify-self: center"
+                class="link"
+                name="Gallery"
+                id="Gallery"
+                onchange="galleryScroll()"
+              >
+                <!-- style="border: none; font-size: xx-large; text-align: center; background-color: #ffffff44; align-self: flex-start;" -->
+
+                <option value="" selected>GALLERY</option>
+                <option value="gallery_A">Healed</option>
+                <option value="gallery_B">Flash</option>
+              </select>
+            </li>
+            <li id="contact-link" class="link">
+              <a class="contact" href="#booking">BOOK</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <section id="hero" style="width: 100vw; padding: 0 15vw">
       <figure class="logo__wrapper">
-        <img src="" alt="" class="logo">
-        <h1>Jane Doe</h1>
-        <h2>Fine Line | Microrealism | Monochrome</h2>
+        <img
+          src="./assets/demoLogo.png"
+          alt=""
+          class=""
+          style="
+            width: 25%;
+            box-shadow: 0 0 2px 4px black;
+            border: 0.5px solid white;
+          "
+        />
+        <h1>Jenna Leigh</h1>
+        <h2>Fine Line | Realism | Monochrome</h2>
       </figure>
-      <p class="bio">Hello my name is Jane Doe and I have been a tatto artist for X years.</p>
+      <p class="bio">
+        Hi, I'm Jenna! I specialize in linework and greyscale tattoos built around precision
+        and contrast. My style leans toward detailed illustration — florals,
+        mythic symbolism, and structured compositions that feel bold without
+        being heavy. I approach each piece with intention. From consultation to
+        final session, I work collaboratively to design tattoos that are
+        visually cohesive and built for longevity. Clean lines, balanced
+        shading, and thoughtful placement are always my priority.
+      </p>
       <p class="cta">
-        <strong>Looking to book?</strong>
-        <br>
-        <a class="purple contact" href="mailto:studioceiz.contact@gmail.com">Book now!</a>
+        <a class=" contact" href="#booking"><strong>Book now!</strong></a>
       </p>
     </section>
     <main>
-    <section id="gallery">
-      <h1>GALLERY</h1>
-      <div id="gallery_A">
-        <img class="sample" src="" alt="tattoo">
-        <img class="sample" src="" alt="tattoo">
-        <img class="sample" src="" alt="tattoo">
-        <img class="sample" src="" alt="tattoo">
-        <img class="sample" src="" alt="tattoo">
-        <img class="sample" src="" alt="tattoo">
-        <img class="sample" src="" alt="tattoo">
-        <img class="sample" src="" alt="tattoo">
-    </div>
-    <br>
-    <div id="gallery_B">
-      <h2>Cover-Ups</h2>
-      <div class="gallery_B">
-      <img class="sample" src="" alt="tattoo">
-      <img class="sample" src="" alt="tattoo">
-      <img class="sample" src="" alt="tattoo">
-      <img class="sample" src="" alt="tattoo"></div>
-    </div>
-    </section>
-    <br><hr><br>
-<!-- 
+      <section id="gallery">
+        <select
+          class="link"
+          name="Gallery"
+          id="GalleryB"
+          onchange="galleryScrollB()"
+          style="
+            font-size: xx-large;
+            text-align: center;
+            align-self: flex-start;
+          "
+        >
+          <option value="" selected>Gallery</option>
+          <option value="gallery_A">Healed</option>
+          <option value="gallery_B">Flash</option>
+        </select>
+        <div id="gallery_A" class="gallery-opt">
+          <h1 style="color: white">Healed</h1>
+          <div class="gallery_A">
+            <img
+              class="gallery_A__sample"
+              src="./assets/galleryA/0.png"
+              alt="tattoo"
+            />
+            <img
+              class="gallery_A__sample"
+              src="./assets/galleryA/1.png"
+              alt="tattoo"
+            />
+            <img
+              class="gallery_A__sample"
+              src="./assets/galleryA/2.png"
+              alt="tattoo"
+            />
+            <img
+              class="gallery_A__sample"
+              src="./assets/galleryA/3.png"
+              alt="tattoo"
+            />
+            <img
+              class="gallery_A__sample"
+              src="./assets/galleryA/4.png"
+              alt="tattoo"
+            />
+            <img
+              class="gallery_A__sample"
+              src="./assets/galleryA/5.png"
+              alt="tattoo"
+            />
+            <img
+              class="gallery_A__sample"
+              src="./assets/galleryA/6.png"
+              alt="tattoo"
+            />
+            <img
+              class="gallery_A__sample"
+              src="./assets/galleryA/7.png"
+              alt="tattoo"
+            />
+            <img
+              class="gallery_A__sample"
+              src="./assets/galleryA/8.png"
+              alt="tattoo"
+            />
+          </div>
+        </div>
+        <br />
+        <div id="gallery_B" class="gallery-opt">
+          <h1>Flash</h1>
+          <div class="gallery_B">
+            <img
+              class="gallery_B__sample"
+              src="./assets/galleryB/0.png"
+              alt="tattoo"
+            />
+            <img
+              class="gallery_B__sample"
+              src="./assets/galleryB/1.png"
+              alt="tattoo"
+            />
+            <img
+              class="gallery_B__sample"
+              src="./assets/galleryB/2.png"
+              alt="tattoo"
+            />
+            <img
+              class="gallery_B__sample"
+              src="./assets/galleryB/3.png"
+              alt="tattoo"
+            />
+          </div>
+        </div>
+      </section>
+      <br />
+      <hr />
+      <br />
+      <!-- 
     <section id="booking">
       <h2>About <span style="color:#0c355d; text-decoration: underline;">Claire Cody</span></h2>
       <p style="text-align: center;">
@@ -306,22 +445,52 @@
       </p>
     </section> -->
 
-    <section id="booking" >
-      <script async src="https://tally.so/widgets/embed.js"></script>
-      <iframe style="min-height:500px;" data-tally-src="https://tally.so/r/obMl51" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" title="Digital Studio Intake Questionnaire"></iframe>
-    </section>
+      <section id="booking">
+        <script async src="https://tally.so/widgets/embed.js"></script>
+        <iframe
+          style="
+            min-height: 500px;
+            border: 1px solid #dfdfde;
+            box-shadow: 0 0 2px 4px #1a1917;
+          "
+          data-tally-src="https://tally.so/r/obMl51"
+          width="100%"
+          height="100%"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          title="Digital Studio Intake Questionnaire"
+        ></iframe>
+      </section>
+    </main>
+    <footer>
+            <p>DEMO STUDIO <br>
+        12345 Boulevard Ln <br>
+        City, ST 10234
+      </p>
+      <a class="cta contact" href="#booking">BOOK NOW</a>
+       <figure>
+        <img src="./assets/demoLogo.png" alt="" class="logo__img" style="margin: 0 auto;background-color: white; width:25%; box-shadow: 0 0 2px 4px black;
+            border: 0.5px solid white;"></a>
+      </figure>
+
+      <br></a>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <a href="https://www.studioceiz.studio" target="_blank">
+      <img src="./assets/personal-logo.png" style="width:5%;max-width: 40px; background-color: white;">
+
+    <p class="myScript" style="font-size: xx-small;"> &copy Claire Cody </p>
+    <p class="myScript" style="font-size: xx-small;"> Operating as StudioCeiz</p>
+    <br>
+    <p style="font-size: xx-small;">*DISCLAIMER: This portfolio is a conceptual demonstration site created to showcase layout, structure, and booking functionality. All work displayed is AI-generated for design purposes only.</p>
 
 
-  </main>
-  <footer >
-    <a class="cta purple contact" href="mailto:studioceiz.contact@gmail.com">Start a project!</a>
-    <p> &copy Claire Cody </p>
-    <p> Working under StudioCeiz</p>
-    <figure>
-      <img src="./assets/personal-logo.png" alt="" class="logo__img" style="margin: 0 auto;background-color: white;;">
-    </figure>
-  </footer>
-</body>
-
-
+</a>
+    </footer>
+  </body>
+  <script src="./dynamics.js"></script>
 </html>
